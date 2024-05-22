@@ -24,14 +24,14 @@ const AimsModal = ({ show, handleClose, onSuccess, setSchedule }) => {
     setLoading(true);
     
     try {
-      const response = await axios.post(`${BASE_URL}/fetch-schedule`, {
+      const response = await axios.post(`http://localhost:5000/fetch-schedule`, {
         username,
         password,
         schoolYear,
         semester,
       });
       
-      await axios.post(`${BASE_URL}/save-aims-data`, {
+      await axios.post(`http://localhost:5000/save-aims-data`, {
         uid: currentUser.uid,
         username,
         password,

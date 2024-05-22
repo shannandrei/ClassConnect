@@ -7,6 +7,7 @@ const admin = require('firebase-admin');
 const bcrypt = require('bcrypt');
 const serviceAccount = require("./classconnect-23c26-firebase-adminsdk-lv1vl-0d4850ffcc.json");
 const path = require('path');
+const chromium = require("@sparticuz/chromium");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -291,7 +292,7 @@ app.post('/fetch-schedule', async (req, res) => {
 
 
 const runPuppeteer = async (username, password, schoolYear, semester) => {
-  const browser = await puppeteer.launch({headless: false, args: ['--no-sandbox', '--disable-setuid-sandbox']});
+  const browser = await puppeteer.launch({ args: ['--no-sandbox', '--disable-setuid-sandbox']});
   const page = await browser.newPage();
   await page.goto('https://cituweb.pinnacle.com.ph/aims/students/');
   await page.waitForSelector('.aims-textfield input[name="password"]');
