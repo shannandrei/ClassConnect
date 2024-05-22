@@ -246,7 +246,7 @@ const LoginSignUp = () => {
 
                     <form autoComplete="off" className="ls-form ls-sign-up-form">
                         <div className="ls-logo">
-                            <img src="/Assets/logo.png" alt="Campus Eats"/>
+                            <img src="/assets/logo.png" alt="Campus Eats"/>
                             <span className="ls-logo-title-campus">Class</span>
                             <span className="ls-logo-title-eats">Connect</span>
                         </div>
@@ -372,9 +372,9 @@ const LoginSignUp = () => {
                 </div>
                 <div className="ls-carousel">
                     <div className="ls-images-wrapper">
-                        <img src="/Assets/3.png" className={`ls-img ls-img1 ${activeBulletIndex === 0 ? 'ls-show' : ''}`} alt="slider 1"/>
-                        <img src="/Assets/2.png" className={`ls-img ls-img2 ${activeBulletIndex === 1 ? 'ls-show' : ''}`} alt="slider 2"/>
-                        <img src="/Assets/1.png" className={`ls-img ls-img3 ${activeBulletIndex === 2 ? 'ls-show' : ''}`} alt="slider 3"/>
+                        <img src="/assets/3.png" className={`ls-img ls-img1 ${activeBulletIndex === 0 ? 'ls-show' : ''}`} alt="slider 1"/>
+                        <img src="/assets/2.png" className={`ls-img ls-img2 ${activeBulletIndex === 1 ? 'ls-show' : ''}`} alt="slider 2"/>
+                        <img src="/assets/1.png" className={`ls-img ls-img3 ${activeBulletIndex === 2 ? 'ls-show' : ''}`} alt="slider 3"/>
                     </div>
                     <div className="ls-text-slider">
                         <div className="ls-text-wrap">
