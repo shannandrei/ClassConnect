@@ -1,0 +1,47 @@
+/* styles.css */
+
+.aims-content {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .selections {
+    margin-bottom: 20px;
+  }
+  
+  .selections label {
+    margin-right: 10px;
+  }
+  
+  .selections select {
+    margin-right: 20px;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  .dbtable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .tableheader {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .regu {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .pull-right {
+    float: right;
+  }
+  

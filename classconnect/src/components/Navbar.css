@@ -1,0 +1,200 @@
+:root {
+    --primary: #eeeeee;
+    --secondary: #800020;
+    --red: #d2627e;
+    --secondary-light: rgba(131, 50, 65, 0.134);
+    --secondary-light-2: rgba(188, 141, 152, 0.1);
+    --white: #fff;
+    --black: #393e46;
+  
+    --shadow: 0px 2px 8px 0px var(--secondary-light);
+  }
+
+*{
+    list-style-type: none;
+}
+
+.nb{
+    display: flex;
+    align-items: center;
+    height: 70px;
+    background-color: var(--white);
+    padding: 0 8%;
+    box-shadow: var(--shadow);
+}
+
+.nb-logo {
+    text-decoration: none; /* Remove default text decoration */
+    display: flex; /* Make the logo link a flex container */
+    align-items: center; /* Align items vertically */
+}
+
+.nb-logo-small{
+    cursor: pointer;
+    width: 50px;
+    margin-right: 20px;
+}
+
+.nb-logo-title-campus{
+    color: #b13734;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.nb-logo-title-eats{
+    color: #989a9b;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.nb-list{
+    width: 100%;
+    text-align: right;
+    padding-right: 2rem;
+}
+
+.nb-list li{
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+.nb-list  li a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--black);
+    text-decoration: none;
+}
+
+/* Active list item */
+.nb-list li.active a {
+    color: var(--red); /* Change color as needed */
+}
+
+/* Hover effect */
+.nb-list li:hover a {
+    color: var(--red); /* Change hover color as needed */
+    /* Add any other hover effects here */
+}
+
+
+
+
+.nb-profile-dropdown{
+    position: relative;
+    width: fit-content;
+}
+
+.nb-profile-dropdown-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    width: 150px;
+    border-radius: 50px;
+    color: var(--black);
+
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    transition: box-shadow 0.2s ease-in, background-color 0.2s ease-in,
+    border 0.3s;
+}
+
+.nb-profile-dropdown-btn:hover {
+    background-color: var(--secondary-light-2);
+    box-shadow: var(--shadow);
+  }
+
+
+.nb-profile-img{
+    position: relative;
+    width: 2.9rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nb-profile-img-image{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+
+.nb-profile-dropdown-btn span {
+    margin: 2px 1rem 0 1rem;
+    margin-right: 0;
+    display: flex;
+}
+
+.nb-profile-dropdown-list{
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    max-height: 0;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: max-height 0.5s;
+    z-index: 99999;
+}
+
+
+.nb-profile-dropdown-list.active {
+    max-height: 500px;
+}
+
+.nb-profile-dropdown-list-item {
+    padding: 0.5rem 0rem 0.5rem 1rem;
+    transition: background-color 0.2s ease-in, padding-left 0.2s;
+}
+
+.nb-profile-dropdown-list-item a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--black);
+}
+
+
+  .nb-profile-dropdown-list-item-icon{
+    margin-right: 0.8rem;
+    width: 2.2rem; /* Adjust size as needed */
+    height: 2.2rem; /* Adjust size as needed */
+    border-radius: 50%;
+    background-color: var(--red); /* Change to desired background color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nb-profile-dropdown-list-item:hover {
+    padding-left: 1.5rem;
+    background-color: var(--secondary-light);
+  }
+
+
+  /* responsive */
+
+  /* Active list item */
+.nb-list li.active a {
+    color: var(--red); /* Change color as needed */
+}
+
+/* Hover effect */
+.nb-list li:hover a {
+    color: var(--red); /* Change hover color as needed */
+    /* Add any other hover effects here */
+}
+
+
+

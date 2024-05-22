@@ -1,0 +1,23 @@
+/* Styles for events fetched from Firebase */
+.firebase-event {
+    background-color: #3174ad; /* Adjust as needed */
+  }
+  
+  /* Styles for schedule events fetched from scraping */
+  .scraped-event {
+    background-color: #f0b400; /* Adjust as needed */
+  }
+  
+  .event {
+    border: 2px solid black;
+    border-radius: 5px;
+    opacity: 0.8;
+    color: white;
+    display: block;
+  }
+  
+  .event:hover {
+    border-color: #ff6347; /* Change border color on hover */
+    box-shadow: 0 0 10px #ff6347; /* Add a glow effect */
+  }
+  

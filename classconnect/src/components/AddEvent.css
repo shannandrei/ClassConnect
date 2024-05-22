@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins:wght@300;400;500;600;800;900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+.event-form {
+  max-width: 40%;
+  margin: 5% auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}  
+ 
+.event-form-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+ 
+.form-group {
+  margin-bottom: 20px;
+}
+ 
+.form-label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+ 
+.form-input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-family: "Poppins", sans-serif;;
+}
+ 
+.form-input:focus,
+.form-input:hover {
+  outline: none;
+  border-color: #b13734;
+}
+ 
+.submit-btn {
+  background-color: #b13734;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+ 
+.submit-btn:hover {
+  background-color: #9c2e2c;
+}
+ 
+.cancel-btn {
+  background-color: transparent;
+  border: 1px solid #b13734;
+  color: #b13734;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  margin-right: 10px;
+}
+ 
+.cancel-btn:hover {
+  background-color: #b13734;
+  color: white;
+}
+ 
+ 
+.dropdown-container {
+  display: flex;
+}
+ 
+.dropdown-container select {
+  flex: 1;
+  margin-right: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg fill='%23b13734' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  padding-right: 30px;
+}
+ 
+/* Hide the default arrow in IE */
+.dropdown-container select::-ms-expand {
+  display: none;
+}

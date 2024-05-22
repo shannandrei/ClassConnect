@@ -1,0 +1,85 @@
+
+  
+  .af-modal-content {
+    background-color: white;
+    border-radius: 10px;
+  }
+  
+  .af-modal-header {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    position: relative; /* Added position relative */
+  }
+  
+  .af-modal-title {
+    font-size: 1.2rem;
+    font-weight: bold; /* Bolden the title */
+  }
+  
+  /* Close Button Styles */
+  .af-close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .af-close-button:focus {
+    outline: none;
+  }
+  
+  /* Form Styles */
+  .af-modal-body {
+    padding: 15px;
+  }
+  
+  .af-form-control {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .af-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #b13734;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .af-button:hover {
+    background-color: #7e2e2d;
+  }
+
+  .af-disclaimer {
+    margin-bottom: 15px;
+    font-size: 0.8rem;
+    color: #777;
+  }
+  
+  .af-error {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ffe6e6; /* Red border */
+    border-radius: 10px; /* Rounded corners */
+    color: #ff4d4d; /* Red text */
+    word-wrap: break-word; /* Wrap long words */
+    overflow-wrap: break-word;
+}
+
+.af-loading {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #cbddf4; /* Red border */
+    border-radius: 10px; /* Rounded corners */
+    color: #5ea4fb; /* Red text */
+    word-wrap: break-word; /* Wrap long words */
+    overflow-wrap: break-word;
+}

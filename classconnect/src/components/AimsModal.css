@@ -1,0 +1,85 @@
+
+  
+  .am-modal-content {
+    background-color: white;
+    border-radius: 10px;
+  }
+  
+  .am-modal-header {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    position: relative; /* Added position relative */
+  }
+  
+  .am-modal-title {
+    font-size: 1.2rem;
+    font-weight: bold; /* Bolden the title */
+  }
+  
+  /* Close Button Styles */
+  .am-close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .am-close-button:focus {
+    outline: none;
+  }
+  
+  /* Form Styles */
+  .am-modal-body {
+    padding: 15px;
+  }
+  
+  .am-form-control {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .am-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #b13734;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .am-button:hover {
+    background-color: #7e2e2d;
+  }
+
+  .am-disclaimer {
+    margin-bottom: 15px;
+    font-size: 0.8rem;
+    color: #777;
+  }
+  
+  .am-error {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ffe6e6; /* Red border */
+    border-radius: 10px; /* Rounded corners */
+    color: #ff4d4d; /* Red text */
+    word-wrap: break-word; /* Wrap long words */
+    overflow-wrap: break-word;
+}
+
+.am-loading {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #cbddf4; /* Red border */
+    border-radius: 10px; /* Rounded corners */
+    color: #5ea4fb; /* Red text */
+    word-wrap: break-word; /* Wrap long words */
+    overflow-wrap: break-word;
+}

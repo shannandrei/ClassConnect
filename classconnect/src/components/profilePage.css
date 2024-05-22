@@ -1,0 +1,276 @@
+/* profilePage.css */
+ 
+.profile-page {
+ 
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #e2e7eb;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-card {
+max-width: 600px;
+padding: 20px;
+background-color: #fff;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+animation: fadeIn 0.5s ease-in-out;
+}
+
+.profile-header {
+padding: 20px;
+}
+
+.profile-info {
+margin-left: 20px;
+}
+
+.profile-field{
+display: flex;
+}
+
+.profile-name,
+.profile-email,
+.profile-password {
+margin-bottom: 20px;
+}
+
+.profile-label {
+font-weight: bold;
+margin-right: 10px;
+}
+
+.profile-input-wrap {
+position: relative;
+}
+
+.profile-input {
+width: 100%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-size: 16px;
+margin-top: 6px;
+}
+
+.profile-input:focus,
+.profile-input:hover {
+outline: none;
+border-color: #b13734;
+}
+
+.reset-password-btn {
+background-color: #007bff;
+color: #fff;
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease-in-out;
+}
+
+.reset-password-btn:hover {
+background-color: #0056b3;
+}
+
+.choose-file-btn {
+background-color: #b13734;
+border: none;
+color: white;
+padding: 10px 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+cursor: pointer;
+border-radius: 5px;
+margin-top: 14px;
+}
+
+.choose-file-btn:hover {
+background-color: #9c2e2c;
+}
+
+.edit-btn {
+background-color: transparent;
+border: none;
+color: #b13734;
+font-size: 16px;
+cursor: pointer;
+}
+
+.edit-btn:hover {
+color: #9c2e2c;
+}
+
+.ls-success,
+.ls-error {
+padding: 10px;
+margin-bottom: 10px;
+}
+
+.ls-success {
+color: #4caf50;
+background-color: #e8f5e9;
+}
+
+.ls-error {
+color: #f44336;
+background-color: #ffebee;
+}
+
+.password-match-icon,
+.password-not-match-icon {
+font-size: 20px;
+margin-left: 5px;
+}
+
+.password-match-icon {
+color: #4caf50;
+}
+
+.password-not-match-icon {
+color: #f44336;
+}
+
+.profile-photo {
+width: 150px;
+height: 150px;
+border-radius: 50%;
+object-fit: cover;
+border: 2px solid #fff;
+box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.profile-photo-container {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-bottom: 20px;
+}
+
+.profile-photo-container input[type="file"] {
+display: none;
+}
+
+/* Add styles for the modal */
+.aims-modal {
+display: none;
+position: fixed;
+z-index: 1;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgba(0, 0, 0, 0.4);
+}
+
+.aims-modal-content {
+background-color: #fefefe;
+margin: 10% auto;
+padding: 20px;
+border: 1px solid #888;
+width: 40%;
+}
+
+.aims-modal-header {
+padding: 10px 16px;
+background-color: #f7f7f7;
+}
+
+.aims-modal-header h2 {
+margin: 0;
+}
+
+.aims-modal-body {
+padding: 16px;
+}
+
+.aims-modal-body .input-group {
+margin-bottom: 16px;
+}
+
+.aims-modal-body label {
+display: block;
+margin-bottom: 8px;
+}
+
+.aims-modal-body input[type="text"],
+.aims-modal-body input[type="password"] {
+width: 100%;
+padding: 8px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+}
+
+.aims-modal-footer {
+padding: 10px 16px;
+background-color: #f7f7f7;
+}
+
+.aims-modal-footer .submit-btn {
+background-color: #4caf50;
+color: white;
+padding: 8px 16px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+.aims-modal-footer .submit-btn:hover {
+background-color: #45a049;
+}
+
+.aims-modal-footer .exit-btn {
+float: right;
+background-color: #f44336;
+color: white;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+.aims-modal-footer .exit-btn:hover {
+background-color: #d32f2f;
+}
+
+.ls-confirm-password-wrap {
+position: relative;
+}
+
+.ls-password-input {
+width: calc(100% - 40px); /* Adjust this value based on the width of the icon */
+}
+
+.ls-profile-input-wrap {
+position: relative;
+}
+
+.ls-profile-input-with-icon .ls-password-icon-wrap {
+position: absolute;
+top: 60%;
+transform: translateY(-50%);
+right: 10px; /* Adjust this value to fit your design */
+}
+
+
+.ls-password-match-icon,
+.ls-password-not-match-icon {
+font-size: 20px;
+}
+
+.ls-password-match-icon {
+color: #4caf50;
+}
+
+.ls-password-not-match-icon {
+color: #f44336;
+}

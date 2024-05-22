@@ -1,0 +1,101 @@
+
+  
+  .cm-modal-content {
+    background-color: white;
+    border-radius: 10px;
+  }
+  
+  .cm-modal-header {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    position: relative; /* Added position relative */
+  }
+  
+  .cm-modal-title {
+    font-size: 1.2rem;
+    font-weight: bold; /* Bolden the title */
+  }
+  
+  /* Close Button Styles */
+  .cm-close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .cm-close-button:focus {
+    outline: none;
+  }
+  
+  /* Form Styles */
+  .cm-modal-body {
+    padding: 15px;
+  }
+  
+  .cm-form-control {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .cm-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #b13734;
+    margin: 0px 10px 0px 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .cm-button-1 {
+    width: 100%;
+    padding: 10px;
+    margin: 0px 10px 0px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #c9c9c9;
+    color: rgb(63, 62, 62);
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .cm-button:hover {
+    background-color: #7e2e2d;
+  }
+
+  .cm-disclaimer {
+    margin-bottom: 15px;
+    font-size: 0.8rem;
+    color: #777;
+  }
+  
+  .cm-error {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ffe6e6; /* Red border */
+    border-radius: 10px; /* Rounded corners */
+    color: #ff4d4d; /* Red text */
+    word-wrap: break-word; /* Wrap long words */
+    overflow-wrap: break-word;
+}
+
+.cm-loading {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #cbddf4; /* Red border */
+    border-radius: 10px; /* Rounded corners */
+    color: #5ea4fb; /* Red text */
+    word-wrap: break-word; /* Wrap long words */
+    overflow-wrap: break-word;
+}
+
+.cm-btn{
+    display: flex;
+}
