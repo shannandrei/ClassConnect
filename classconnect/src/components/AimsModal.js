@@ -9,7 +9,9 @@ import { useAuth } from '../context/AuthContext';
 
 
 const AimsModal = ({ show, handleClose, onSuccess, setSchedule }) => {
-  const BASE_URL = 'https://class-connect-server.onrender.com/';
+  // const BASE_URL = 'https://class-connect-server.onrender.com/';
+  // const BASE_URL = 'https://class-connect-server.vercel.app/';
+  const BASE_URL = 'http://localhost:5000';
   const { currentUser } = useAuth();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
