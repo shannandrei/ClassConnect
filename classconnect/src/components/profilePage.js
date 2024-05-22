@@ -22,6 +22,7 @@ const ProfilePage = () => {
     logout
   } = useAuth();
   const navigate = useNavigate();
+  const BASE_URL = 'https://class-connect-server.onrender.com'
  
   const [email, setEmail] = useState(currentUser.email);
   const [displayName, setDisplayName] = useState(currentUser.displayName);
@@ -64,7 +65,7 @@ const ProfilePage = () => {
   const handleSuccess = async (newSchedule) => {
     console.log('Aims Schedule:', newSchedule);
     try {
-      const response = await axios.post('/update-schedule', {
+      const response = await axios.post(`${BASE_URL}/update-schedule`, {
         uid: currentUser.uid,
         newSchedule: newSchedule
       });

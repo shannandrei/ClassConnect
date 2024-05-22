@@ -260,7 +260,7 @@ app.get('/fetch-schedules/:uid', async (req, res) => {
 app.post('/update-schedule', async (req, res) => {
   const { uid, newSchedule } = req.body;
   const userDocRef = db.collection('users').doc(uid);
- 
+  console.log('updating schedule...');
   try {
     const doc = await userDocRef.get();
     if (!doc.exists) {
@@ -272,7 +272,9 @@ app.post('/update-schedule', async (req, res) => {
       res.status(200).send("Class Schedule is up to date.");
     } else {
       await userDocRef.update({ class_schedule: newSchedule });
+      console.log('Class schedule updated successfully.');
       res.status(200).send("Class schedule updated successfully.");
+
     }
   } catch (error) {
     console.error('Error updating class schedule:', error);
