@@ -8,7 +8,7 @@ import { useAuth } from '../context/AuthContext';
 import { Navigate } from "react-router-dom";
 
 const AimsPasswordModal = ({ showModal, onClose, onSuccess, aimsData}) => {
-  
+  const BASE_URL = 'https://class-connect-server.vercel.app';
   const { currentUser } = useAuth();
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
@@ -21,14 +21,14 @@ const AimsPasswordModal = ({ showModal, onClose, onSuccess, aimsData}) => {
     onSuccess(null);
     setLoading(true);
     try {
-      const response = await axios.post('http://localhost:5000/fetch-schedule', {
+      const response = await axios.post(`${BASE_URL}/fetch-schedule`, {
         username: aimsData.username,
         password,
         schoolYear: aimsData.schoolYear,
         semester: aimsData.semester,
       });
       // Directly pass the schedule to onSuccess
-      const response1 = await axios.post('/update-schedule', {
+      const response1 = await axios.post(`${BASE_URL}/update-schedule`, {
         uid: currentUser.uid,
         newSchedule: response.data,
       });

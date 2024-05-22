@@ -23,6 +23,7 @@ const CustomEvent = ({ event }) => (
 );
 
 const Calendar = () => {
+  const BASE_URL = 'https://class-connect-server.vercel.app';
   const { currentUser } = useAuth();
   const [events, setEvents] = useState([]);
   const [classSchedule, setClassSchedule] = useState([]);
@@ -103,14 +104,14 @@ const Calendar = () => {
 
     const fetchClassSchedule = async () => {
       try {
-        const response = await axios.get(`/fetch-schedules/${currentUser.uid}`);
+        const response = await axios.get(`${BASE_URL}/fetch-schedules/${currentUser.uid}`);
         fetchedClassSchedule = response.data;
         if(fetchedClassSchedule.length === 0 || fetchedClassSchedule === '') {
           setError2('No class schedule imported. Please update your profile.');
           return;
         }
 
-        const aimsResponse = await axios.get(`http://localhost:5000/fetch-aims/${currentUser.uid}`);
+        const aimsResponse = await axios.get(`${BASE_URL}/fetch-aims/${currentUser.uid}`);
         const aimsData = aimsResponse.data.aimsData;
         setAimsData(aimsData);
 
@@ -120,7 +121,7 @@ const Calendar = () => {
         const lastUpdated = new Date(aimsData.lastUpdated);
         if (lastUpdated < oneWeekAgo) {
           setShowModal(true);
-          await axios.post('http://localhost:5000/update-last-updated', { uid: currentUser.uid });
+          await axios.post(`${BASE_URL}/update-last-updated`, { uid: currentUser.uid });
         }
 
         const endDate = moment().add(1, 'month').endOf('month').toDate();

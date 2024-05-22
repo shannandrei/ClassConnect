@@ -8,7 +8,7 @@ import { useAuth } from "../context/AuthContext";
 
 const ApplicationFormModal = ({ showModal, onClose, onSuccess }) => {
   const { currentUser } = useAuth();
-  
+  const BASE_URL = "https://class-connect-server.vercel.app";
   const [orgName, setOrgName] = useState("");
   const [orgType, setOrgType] = useState("");
   const [orgDescription, setOrgDescription] = useState("");
@@ -30,7 +30,7 @@ const ApplicationFormModal = ({ showModal, onClose, onSuccess }) => {
         number,
         userId: currentUser.uid
       };
-      const response = await axios.post('http://localhost:5000/submitApplication', data);
+      const response = await axios.post(`${BASE_URL}/submitApplication`, data);
       setLoading(false);
       onSuccess(response.data);
       onClose();
