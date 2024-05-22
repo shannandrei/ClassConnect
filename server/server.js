@@ -20,6 +20,10 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../classconnect/classconnect/build')));
+app.use("/", (req, res) => {
+  res.send("Hello World");
+});
+
 
 app.post('/save-aims-data', async (req, res) => {
   try {
