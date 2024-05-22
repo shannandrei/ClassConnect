@@ -9,7 +9,7 @@ import { useAuth } from '../context/AuthContext';
 
 
 const AimsModal = ({ show, handleClose, onSuccess, setSchedule }) => {
-  const BASE_URL = 'https://class-connect-server.vercel.app';
+  const BASE_URL = 'https://class-connect-server.onrender.com/';
   const { currentUser } = useAuth();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -24,14 +24,14 @@ const AimsModal = ({ show, handleClose, onSuccess, setSchedule }) => {
     setLoading(true);
     
     try {
-      const response = await axios.post(`http://localhost:5000/fetch-schedule`, {
+      const response = await axios.post(`${BASE_URL}/fetch-schedule`, {
         username,
         password,
         schoolYear,
         semester,
       });
       
-      await axios.post(`http://localhost:5000/save-aims-data`, {
+      await axios.post(`${BASE_URL}/save-aims-data`, {
         uid: currentUser.uid,
         username,
         password,
