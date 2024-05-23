@@ -58,7 +58,7 @@ const Dashboard = () => {
   const fetchRequests = async () => {
       try {
           // Make a fetch request to your API endpoint
-          const response = await fetch('/fetch-requests');
+          const response = await fetch(`${BASE_URL}/fetch-requests`);
           if (!response.ok) {
               throw new Error('Failed to fetch requests');
           }
@@ -80,7 +80,7 @@ const Dashboard = () => {
       console.log('Accepting request with id:', id);
       
       // Send request to update request status to 'accepted' and user role to 'organization'
-      await fetch(`/requests/${id}/accept`, { method: 'PUT' });
+      await fetch(`${BASE_URL}/requests/${id}/accept`, { method: 'PUT' });
       
       // Remove accepted request from state
       const updatedRequests = requests.filter(request => request.id !== id);
