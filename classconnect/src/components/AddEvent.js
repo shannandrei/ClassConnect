@@ -69,10 +69,11 @@ const AddEvent = () => {
   const [success, setSuccess] = useState(null);
   const navigate = useNavigate();
   const today = moment().format('YYYY-MM-DD');
+  const BASE_URL = 'https://class-connect-server.onrender.com'
  
   useEffect(() => {
     if (currentUser.uid) {
-      fetch(`/user-role/${currentUser.uid}`)
+      fetch(`${BASE_URL}/user-role/${currentUser.uid}`)
         .then(response => {
           if (response.ok) {
             return response.json();

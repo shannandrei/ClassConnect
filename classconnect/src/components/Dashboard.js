@@ -18,12 +18,12 @@ const Dashboard = () => {
   const [idHolder, setIdHolder] = useState(null);
   const [confirmation, setConfirmation] = useState(null);
   const navigate = useNavigate();
-
+  const BASE_URL = 'https://class-connect-server.onrender.com'
 
   useEffect(() => {
       // Fetch requests from your API here
       if (currentUser.uid) {
-        fetch(`/user-role/${currentUser.uid}`)
+        fetch(`${BASE_URL}/user-role/${currentUser.uid}`)
           .then(response => {
             if (response.ok) {
               return response.json();
@@ -32,8 +32,10 @@ const Dashboard = () => {
             }
           })
           .then(data => {
+            console.log('User role: adminn', data.role);
             console.log(data);
-            if(data.role !== 'admin' && data.role !== 'organization') {
+            if(data.role !== 'admin') {
+              console.log('User role: admisfenn', data.role);
               navigate('/');
             }
           })

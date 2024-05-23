@@ -16,6 +16,7 @@ function Navbar() {
     const dropdownRef = useRef(null);
     const [isAdmin, setIsAdmin] = useState(false);
     const [isOrg, setIsOrg] = useState(false);
+    const BASE_URL = 'https://class-connect-server.onrender.com'
 
     const toggleDropdown = () => {
         setDropdownActive(!dropdownActive);
@@ -38,7 +39,7 @@ function Navbar() {
         }
         if (currentUser.uid) {
             console.log('fetching user role with id: ', currentUser.uid);
-            fetch(`/user-role/${currentUser.uid}`)
+            fetch(`${BASE_URL}/user-role/${currentUser.uid}`)
               .then(response => {
                 if (response.ok) {
                   return response.json();
