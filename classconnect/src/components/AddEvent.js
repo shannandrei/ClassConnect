@@ -68,6 +68,7 @@ const AddEvent = () => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(null);
   const navigate = useNavigate();
+  const today = moment().format('YYYY-MM-DD');
  
   useEffect(() => {
     if (currentUser.uid) {
@@ -173,6 +174,7 @@ const AddEvent = () => {
               value={date}
               onChange={(e) => setDate(e.target.value)}
               required
+              min={today}
             />
           </div>
           <div className="form-group">

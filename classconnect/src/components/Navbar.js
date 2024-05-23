@@ -31,39 +31,13 @@ function Navbar() {
         setSidebarOpen(!sidebarOpen);
     };
 
-    // useEffect(() => {
-    //     if (currentUser.photoURL) {
-    //         setProfilePicURL(currentUser.photoURL);
-    //     }
-    //     if (currentUser.uid) {
-    //         fetch(`/user-role/${currentUser.uid}`)
-    //           .then(response => {
-    //             if (response.ok) {
-    //               return response.json();
-    //             } else {
-    //               throw new Error('Failed to fetch user role');
-    //             }
-    //           })
-    //           .then(data => {
-    //             setIsAdmin(data.role === 'admin');
-    //             console.log('User role:', data.role);   
-    //             setIsOrg(data.role === 'organization');
-    //           })
-    //           .catch(error => console.error('Error fetching user role:', error));
-    //       }
-          
-    // }, [currentUser]);
-
     useEffect(() => {
-        document.addEventListener('mousedown', closeDropdown);
-        return () => {
-            document.removeEventListener('mousedown', closeDropdown);
-        };
-
+        console.log('checking');
         if (currentUser.photoURL) {
             setProfilePicURL(currentUser.photoURL);
         }
         if (currentUser.uid) {
+            console.log('fetching user role with id: ', currentUser.uid);
             fetch(`/user-role/${currentUser.uid}`)
               .then(response => {
                 if (response.ok) {
@@ -79,6 +53,18 @@ function Navbar() {
               })
               .catch(error => console.error('Error fetching user role:', error));
           }
+        
+          console.log('isAdmin:', isAdmin);
+            console.log('isOrg:', isOrg);
+    }, []);
+
+    useEffect(() => {
+        document.addEventListener('mousedown', closeDropdown);
+        return () => {
+            document.removeEventListener('mousedown', closeDropdown);
+        };
+
+       
         
     }, []);
     return (
