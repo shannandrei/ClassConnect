@@ -354,7 +354,7 @@ const runPuppeteer = async (username, password, schoolYear, semester) => {
     } else if (period === 'AM' && hour === 12) {
         hour = 0;
     } 
-    // const singaporeHour = hour + 8;
+    const singaporeHour = hour - 8;
     today.setHours(hour, minutes, 0);
     // today.setUTCHours(0); // Set UTC hours to ensure timezone offset is 0
 

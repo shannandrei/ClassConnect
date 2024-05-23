@@ -22,8 +22,8 @@ const ProfilePage = () => {
     logout
   } = useAuth();
   const navigate = useNavigate();
-  // const BASE_URL = 'https://class-connect-server.onrender.com'
-  const BASE_URL = 'http://localhost:5000';
+  const BASE_URL = 'https://class-connect-server.onrender.com'
+  // const BASE_URL = 'http://localhost:5000';
  
   const [email, setEmail] = useState(currentUser.email);
   const [displayName, setDisplayName] = useState(currentUser.displayName);
