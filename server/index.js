@@ -355,7 +355,7 @@ const runPuppeteer = async (username, password, schoolYear, semester) => {
         hour = 0;
     } 
     const singaporeHour = hour - 8;
-    today.setHours(hour, minutes, 0);
+    today.setHours(singaporeHour, minutes, 0);
     // today.setUTCHours(0); // Set UTC hours to ensure timezone offset is 0
 
     const isoString = today.toISOString(); // Append '000Z' to ensure UTC
